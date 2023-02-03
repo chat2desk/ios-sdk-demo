@@ -1,0 +1,23 @@
+/* No comment provided by engineer. */
+"connection_status: %@" = "Connection status: %@";
+
+/* No comment provided by engineer. */
+"fetch_messages" = "Fetch messages";
+
+/* No comment provided by engineer. */
+"file" = "File";
+
+/* No comment provided by engineer. */
+"flush_all" = "Flush all";
+
+/* No comment provided by engineer. */
+"photo_video" = "Photo or video";
+
+/* No comment provided by engineer. */
+"send_mesage" = "Send mesage";
+
+/* No comment provided by engineer. */
+"typing" = "typing...";
+
+/* No comment provided by engineer. */
+"waiting_operator" = "Waiting for operator";

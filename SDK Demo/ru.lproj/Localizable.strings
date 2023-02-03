@@ -1,0 +1,23 @@
+/* No comment provided by engineer. */
+"connection_status: %@" = "Статус подключения: %@";
+
+/* No comment provided by engineer. */
+"fetch_messages" = "Загрузить сообщения";
+
+/* No comment provided by engineer. */
+"file" = "Файл";
+
+/* No comment provided by engineer. */
+"flush_all" = "Стереть все данные";
+
+/* No comment provided by engineer. */
+"photo_video" = "Изображение или видео";
+
+/* No comment provided by engineer. */
+"send_mesage" = "Отправить сообщение";
+
+/* No comment provided by engineer. */
+"typing" = "Печатает...";
+
+/* No comment provided by engineer. */
+"waiting_operator" = "Ожидание оператора";
