@@ -10,5 +10,10 @@
 	<string>$(WIDGET_TOKEN)</string>
 	<key>WS_HOST</key>
 	<string>$(WS_HOST)</string>
+	<key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>
