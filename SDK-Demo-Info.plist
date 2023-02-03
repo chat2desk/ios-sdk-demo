@@ -2,13 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>WS_HOST</key>
-	<string>$(WS_HOST)</string>
 	<key>BASE_HOST</key>
 	<string>$(BASE_HOST)</string>
 	<key>STORAGE_HOST</key>
 	<string>$(STORAGE_HOST)</string>
 	<key>WIDGET_TOKEN</key>
 	<string>$(WIDGET_TOKEN)</string>
+	<key>WS_HOST</key>
+	<string>$(WS_HOST)</string>
 </dict>
 </plist>
