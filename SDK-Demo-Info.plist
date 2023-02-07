@@ -4,16 +4,20 @@
 <dict>
 	<key>BASE_HOST</key>
 	<string>$(BASE_HOST)</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>STORAGE_HOST</key>
 	<string>$(STORAGE_HOST)</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>processing</string>
+	</array>
 	<key>WIDGET_TOKEN</key>
 	<string>$(WIDGET_TOKEN)</string>
 	<key>WS_HOST</key>
 	<string>$(WS_HOST)</string>
-	<key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-    </dict>
 </dict>
 </plist>

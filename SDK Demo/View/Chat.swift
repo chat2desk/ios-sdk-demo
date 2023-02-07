@@ -49,7 +49,7 @@ struct Chat: View {
                         phone: "Test Phone",
                         fieldSet: [1 : "Field 1", 5: "Field 5"]
                     )
-                    try await viewModel.chat2desk.syncMessages()
+                    try await viewModel.chat2desk.fetchMessages()
                 }
             }
         }

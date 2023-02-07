@@ -29,7 +29,7 @@ struct Header: View {
     
     func syncMessages() -> Void {
         Task {
-            try await viewModel.chat2desk.syncMessages()
+            try await viewModel.chat2desk.fetchMessages()
         }
     }
     

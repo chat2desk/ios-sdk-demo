@@ -18,9 +18,9 @@ struct AttachmentMeta {
 }
 
 extension AttachmentMeta {
-    func toDomain() -> chat2desk_sdk.AttachmentMeta? {
+    func toDomain() -> AttachedFile? {
         if let url = contentUri {
-            return chat2desk_sdk.AttachmentMeta.Companion().fromURL(url: url, originalName: originalName, mimeType: mimeType, fileSize: fileSize)
+            return AttachedFile.Companion().fromURL(url: url, originalName: originalName, mimeType: mimeType, fileSize: fileSize)
         }
         return nil
     }

@@ -21,8 +21,8 @@ struct MessageInput: View {
     func sendMessageWithAttachment(_ attachment: AttachmentMeta) -> Void {
         sending = true
         Task {
-            let attachmentMeta = attachment.toDomain()
-            try await viewModel.chat2desk.sendMessage(msg: text, attachment: attachmentMeta!)
+            let attachedFile = attachment.toDomain()
+            try await viewModel.chat2desk.sendMessage(msg: text, attachedFile: attachedFile!)
             text = ""
             self.attachment = nil
             sending = false
