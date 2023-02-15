@@ -2,7 +2,8 @@
 //  SDK_DemoApp.swift
 //  SDK Demo
 //
-//  Created by Ростислав Ляшев on 01.02.2023.
+//  Created by Ростислав Ляшев on 20.01.2023.
+//  Copyright © 2023 Chat2Desk. All rights reserved.
 //
 
 import SwiftUI
@@ -36,6 +37,7 @@ struct SDK_DemoApp: App {
     var body: some Scene {
         WindowGroup {
             Chat().environmentObject(observedChat2Desk)
+                .colorScheme(.light)
                 .onAppear {
                     Task {
                         try await observedChat2Desk.chat2desk.start()
@@ -94,52 +96,5 @@ class Chat2DeskViewModel: ObservableObject {
         connectionStatusWatcher?.close()
         errorWatcher?.close()
         customFieldsWatcher?.close()
-    }
-}
-
-class SomeClass: ObservableObject {
-    @Published public var connectionStatus: ConnectionState? = nil
-    
-    let chat2desk: Chat2Desk
-    
-    var connectionStatusWatcher: Closeable?
-    
-    var fields: [CustomField] = []
-    
-    init(chat2desk: Chat2Desk) {
-        self.chat2desk = chat2desk
-        
-        connectionStatusWatcher = chat2desk.watchConnectionStatus().watch { [weak self] status in
-            self?.connectionStatus = status
-            print("test")
-        }
-        chat2desk.watchCustomFields().watch { customFields in
-            self.fields = customFields?.compactMap({ $0 as? CustomField }) ?? []
-        }
-    }
-
-    
-    func test() {
-        let fieldSet: [KotlinInt: String] = [KotlinInt(value: self.fields[0].id): "value"]
-        
-        Task{
-         try await chat2desk.sendClientParams(name: "name", phone: "phone", fieldSet: fieldSet)
-        }
-    }
-    
-    func start() {
-        Task {
-            try await chat2desk.start()
-        }
-    }
-    
-    func stop() {
-        Task {
-            try await chat2desk.stop()
-        }
-    }
-    
-    deinit {
-        connectionStatusWatcher?.close()
     }
 }

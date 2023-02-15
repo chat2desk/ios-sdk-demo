@@ -1,6 +1,6 @@
 //
 //  ConnectionStatus.swift
-//  iosDemo
+//  SDK Demo
 //
 //  Created by Ростислав Ляшев on 19.01.2023.
 //  Copyright © 2023 Chat2Desk. All rights reserved.

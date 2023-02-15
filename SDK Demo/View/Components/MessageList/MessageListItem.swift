@@ -1,6 +1,6 @@
 //
 //  MessageListItem.swift
-//  iosDemo
+//  SDK Demo
 //
 //  Created by Ростислав Ляшев on 20.01.2023.
 //  Copyright © 2023 Chat2Desk. All rights reserved.
@@ -11,7 +11,7 @@ import chat2desk_sdk
 
 struct MessageListItem: View {
     var message: Message
-    var onResend: (_ message: Message)-> ()
+    var onResend: (_ message: Message) -> ()
     
     var resendButton: some View {
         Button(action: {
@@ -39,7 +39,7 @@ struct MessageListItem: View {
                     ) { attachment in
                         ImageAttachment(attachment: attachment)
                     }
-
+                    
                     ForEach(
                         attachments.filter{ !$0.contentType.starts(with: "image/")
                         },
@@ -91,6 +91,7 @@ struct MessageListItem_Preview: PreviewProvider {
             List(messagesFixture, id: \.id) {message in
                 MessageListItem(message: message, onResend: { message in })
                     .listRowSeparator(.hidden)
+                    .buttonStyle(BorderlessButtonStyle())
                 Spacer().frame(height: 20)
             }
         }

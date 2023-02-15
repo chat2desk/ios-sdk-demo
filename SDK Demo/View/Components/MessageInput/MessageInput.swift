@@ -39,11 +39,19 @@ struct MessageInput: View {
     }
     
     func handleSendMessage() -> Void {
+        if (isDisable()) {
+            return
+        }
+        
         if let attachment = self.attachment {
             sendMessageWithAttachment( attachment)
         } else {
             sendMessage()
         }
+    }
+    
+    func isDisable() -> Bool {
+        return sending || (text.isEmpty && attachment == nil)
     }
     
     var body: some View {
@@ -57,16 +65,17 @@ struct MessageInput: View {
                 }
                 
                 TextField("send_mesage", text: $text)
+                    .submitLabel(.send)
+                    .onSubmit(handleSendMessage)
                 
                 Button(action: handleSendMessage) {
                     Image(systemName: "paperplane.fill")
-                }.disabled(sending || (text.isEmpty && attachment == nil))
+                }.disabled(isDisable())
             }
             .padding(.vertical, 13)
             .padding(.horizontal, 16)
             .background(Color.white, ignoresSafeAreaEdges: [])
         }
-        
     }
 }
 

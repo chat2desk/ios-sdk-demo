@@ -4,6 +4,10 @@
 <dict>
 	<key>BASE_HOST</key>
 	<string>$(BASE_HOST)</string>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -13,6 +17,7 @@
 	<string>$(STORAGE_HOST)</string>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>fetch</string>
 		<string>processing</string>
 	</array>
 	<key>WIDGET_TOKEN</key>

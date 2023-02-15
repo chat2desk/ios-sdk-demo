@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7462B6C30C9B6BB0CDC61095 /* Pods_SDK_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5085ED2DE3B2DE598040CE54 /* Pods_SDK_Demo.framework */; };
 		7C14E88B298AC4CF00BE4D23 /* SDK_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14E88A298AC4CF00BE4D23 /* SDK_DemoApp.swift */; };
+		7CB74D6E299CAFE300E54A06 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB74D6D299CAFE300E54A06 /* View.swift */; };
 		7CC59E37298D1E1900F1BFC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C14E88E298AC4D000BE4D23 /* Assets.xcassets */; };
 		7CC59E38298D1E2200F1BFC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C14E891298AC4D000BE4D23 /* Preview Assets.xcassets */; };
 		7CC59E3B298D1FBA00F1BFC3 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC59E3A298D1FBA00F1BFC3 /* Chat.swift */; };
@@ -42,6 +43,7 @@
 		7C14E88A298AC4CF00BE4D23 /* SDK_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDK_DemoApp.swift; sourceTree = "<group>"; };
 		7C14E88E298AC4D000BE4D23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C14E891298AC4D000BE4D23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7CB74D6D299CAFE300E54A06 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		7CC59E3A298D1FBA00F1BFC3 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		7CC59E3E298D1FEF00F1BFC3 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		7CC59E40298D200500F1BFC3 /* ConnectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				7CC59E61298D212C00F1BFC3 /* Colors.swift */,
+				7CB74D6D299CAFE300E54A06 /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -239,7 +242,7 @@
 				7C14E883298AC4CF00BE4D23 /* Sources */,
 				7C14E884298AC4CF00BE4D23 /* Frameworks */,
 				7C14E885298AC4CF00BE4D23 /* Resources */,
-				E0425AC908F414BA5B6046C6 /* [CP] Embed Pods Frameworks */,
+				67F7CF400B1E1EDC22E92119 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,7 +323,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E0425AC908F414BA5B6046C6 /* [CP] Embed Pods Frameworks */ = {
+		67F7CF400B1E1EDC22E92119 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -364,6 +367,7 @@
 				7CC59E4A298D205200F1BFC3 /* AttachmentPreview.swift in Sources */,
 				7CC59E46298D203300F1BFC3 /* MessageInput.swift in Sources */,
 				7CC59E58298D20C600F1BFC3 /* DocumentPicker.swift in Sources */,
+				7CB74D6E299CAFE300E54A06 /* View.swift in Sources */,
 				7CC59E3B298D1FBA00F1BFC3 /* Chat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,7 +510,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"SDK Demo/Preview Content\"";
 				DEVELOPMENT_TEAM = GP3VSUDRQU;
 				ENABLE_PREVIEWS = YES;
@@ -515,8 +519,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -524,6 +530,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chat2desk.demos.chat2desk-sdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -537,7 +546,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"SDK Demo/Preview Content\"";
 				DEVELOPMENT_TEAM = GP3VSUDRQU;
 				ENABLE_PREVIEWS = YES;
@@ -546,8 +555,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,6 +566,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chat2desk.demos.chat2desk-sdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -21,3 +21,6 @@
 
 /* No comment provided by engineer. */
 "waiting_operator" = "Ожидание оператора";
+
+/* No comment provided by engineer. */
+"empty_list" = "Пустой список";

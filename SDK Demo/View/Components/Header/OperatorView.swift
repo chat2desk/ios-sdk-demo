@@ -1,6 +1,6 @@
 //
 //  Operator.swift
-//  iosDemo
+//  SDK Demo
 //
 //  Created by Ростислав Ляшев on 19.01.2023.
 //  Copyright © 2023 Chat2Desk. All rights reserved.
@@ -50,7 +50,7 @@ struct OperatorView: View {
                         .font(.system(size: 11, weight: .regular))
                         .foregroundColor(.textSecondary)
                 }
-            }.frame(height: 44, alignment: .topLeading)
+            }.frame(height: 44)
         }
     }
 }
