@@ -50,7 +50,7 @@ Note: you need to modify the urls to escape the //, as xcode considers these cha
 
 ## Useful links
 1. [Using Chat2Desk SDK](https://chat2desk.atlassian.net/wiki/external/453050405/NzFkMjYxOWI4OTdkNDg2MmIwMzA5NWYzYmViNDQ5YjU?atlOrigin=eyJpIjoiNzljMjliYjQyNWM2NGU1Yjg0OWZlNzZkMWIxOGI5ZTMiLCJwIjoiYyJ9)
-2. [SDK Reference](https://sdk-api.chat2desk.com)
+2. [SDK Reference](https://sdk.chat2desk.com)
 
 ##  Have a question
 
