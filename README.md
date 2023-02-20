@@ -1,7 +1,7 @@
 
 # Chat2Desk SDK Demo
 
-This application demonstrates chat integration using the Chat2Desk iOS SDK, allowing users to perform various chat operations with Chat2Desk service
+This application demonstrates chat integration using Chat2Desk iOS SDK, allowing users to perform various chat operations with Chat2Desk service
 
 ## Features
 The application supports the following features:
