@@ -15,12 +15,12 @@ The application supports the following features:
 
 ## Getting started
 
-To get started, you'll need an account on Chat2Desk and channel with Online Chat.
+You'll need a Chat2Desk  account on and a channel with Online Widget to get started.
 
 1. Retrieve the parameters from the widget settings:
 - widget token
-- server urls
-2. Create the `Config.xcconfig` file in the root folder with following content:
+- server URLs
+2. Create `Config.xcconfig` file in the root folder with following content:
 ````
 SIMPLE_SLASH = /
 WIDGET_TOKEN = YOUR_WIDGET_TOKEN_HERE
@@ -28,9 +28,9 @@ BASE_HOST = YOUR_BASE_HOST_TOKEN_HERE
 WS_HOST = YOUR_WS_HOST_TOKEN_HERE
 STORAGE_HOST = YOUR_STORAGE_TOKEN_HERE
 ````
-Note that you need to modify the URLs to escape the //, as Xcode considers these characters to be the beginning of a comment. For example, use `https:$(SIMPLE_SLASH)/livechatv2-support.chat2desk.com`
+Note that you need to modify the URLs to escape //, as Xcode considers these characters to be the beginning of a comment. For example, use `https:$(SIMPLE_SLASH)/livechatv2-support.chat2desk.com`
 
-3. Build and run app.
+3. Build and run the app.
 
 ## Usage
 
@@ -52,5 +52,5 @@ Note that you need to modify the URLs to escape the //, as Xcode considers these
 1. [Using Chat2Desk SDK](https://chat2desk.atlassian.net/wiki/external/453247004/ZTdmYjQ3YzQ0MDFkNGU4MjhlOGIzZjlmYjQ1MmViYjE?atlOrigin=eyJpIjoiOTk2ZjdlOTdiNjg3NDY4YTk2YWU0NDg3MGVhNWI5MjIiLCJwIjoiYyJ9)
 2. [SDK Reference](https://sdk.chat2desk.com)
 
-##  Have a question
+## Still have questions?
 - create an issue
