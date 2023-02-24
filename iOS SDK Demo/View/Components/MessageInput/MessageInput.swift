@@ -15,6 +15,7 @@ struct MessageInput: View {
     @State var sending = false
     
     func handleAttachmentButton() {
+        hideKeyboard()
         showAttachmentModal.toggle()
     }
     
