@@ -29,7 +29,7 @@ struct DocumentAttachment: View {
                 .frame(width: 8)
             
             VStack(alignment: .leading) {
-                Text(attachment.originalFileName ?? "")
+                Text(attachment.originalFileName ?? URL(string: attachment.link)?.lastPathComponent ?? "")
                     .lineLimit(1)
                     .font(
                         .system(size: 14, weight: .medium))
