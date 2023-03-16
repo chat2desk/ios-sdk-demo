@@ -14,10 +14,8 @@ struct DocumentPicker: UIViewControllerRepresentable {
     var onSelect: (_ url: URL) -> ()
     var onCancel: (() -> ())?
     
-    @Environment(\.presentationMode) private var presentationMode
-    
     func makeUIViewController(context: UIViewControllerRepresentableContext<DocumentPicker>) -> UIDocumentPickerViewController {
-        let picker = UIDocumentPickerViewController(forOpeningContentTypes: sourceType)
+        let picker = UIDocumentPickerViewController(forOpeningContentTypes: sourceType, asCopy: true)
         picker.allowsMultipleSelection = false
         picker.delegate = context.coordinator
         return picker
@@ -41,15 +39,12 @@ struct DocumentPicker: UIViewControllerRepresentable {
         
         func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls:[URL]) {
             if (!urls.isEmpty) {
-                parent.onSelect(urls[0])
+                parent.onSelect(urls.first!)
             }
-            parent.presentationMode.wrappedValue.dismiss()
         }
         
         func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
             parent.onCancel?()
-            
-            parent.presentationMode.wrappedValue.dismiss()
         }
     }
 }

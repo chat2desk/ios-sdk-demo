@@ -73,7 +73,7 @@ struct MessageListItem: View {
                     
                 }.frame(alignment: .center)
             }
-            .padding(.horizontal, 14)
+            .padding(.horizontal, 8)
             .padding(.vertical, 8)
             .frame(maxWidth: 200, alignment: message.inMessage() ? .trailing : .leading)
             .background(

@@ -14,21 +14,18 @@ struct SDK_DemoApp: App {
     let observedChat2Desk: Chat2DeskViewModel
     
     init() {
-#if DEBUG
-        let isDebug = true
-#else
-        let isDebug = false
-#endif
-        
         let dictionary = Bundle.main.infoDictionary
         let settings = Settings.init(
             authToken: dictionary?["WIDGET_TOKEN"] as? String ?? "",
             baseHost: dictionary?["BASE_HOST"] as? String ?? "",
             wsHost: dictionary?["WS_HOST"] as? String ?? "",
-            storageHost: dictionary?["STORAGE_HOST"] as? String ?? "",
-            inMemory: false,
-            withLog: KotlinBoolean(bool: isDebug)
+            storageHost: dictionary?["STORAGE_HOST"] as? String ?? ""
         )
+#if DEBUG
+        settings.withLog = true
+        settings.logLevel = Ktor_client_loggingLogLevel.info
+#endif
+    
         let chat2desk = Chat2Desk.Companion().create(settings: settings)
         
         observedChat2Desk = Chat2DeskViewModel(chat2desk: chat2desk)
