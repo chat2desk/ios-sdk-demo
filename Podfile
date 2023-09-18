@@ -4,5 +4,5 @@ platform :ios, '11'
 target 'iOS SDK Demo' do
   use_frameworks!
 
-  pod 'chat2desk_sdk', '~> 1.1.0'
+  pod 'chat2desk_sdk', '~> 1.2.0'
 end
