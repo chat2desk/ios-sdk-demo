@@ -21,6 +21,12 @@ struct SDK_DemoApp: App {
             wsHost: dictionary?["WS_HOST"] as? String ?? "",
             storageHost: dictionary?["STORAGE_HOST"] as? String ?? ""
         )
+        
+        // Example of custom socket configuration
+        let configuration = URLSessionConfiguration.default
+        configuration.allowsCellularAccess = true
+        settings.socketConfiguration = configuration
+        
 #if DEBUG
         settings.withLog = true
         settings.logLevel = Ktor_client_loggingLogLevel.info
