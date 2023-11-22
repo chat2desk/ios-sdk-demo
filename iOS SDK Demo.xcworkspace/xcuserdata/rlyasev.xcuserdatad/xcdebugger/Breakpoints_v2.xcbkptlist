@@ -18,6 +18,38 @@
             endingLineNumber = "22"
             landmarkName = "toDomain()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "640DE53C-954F-494E-97AF-4ADE64768102 - f7912a3ba1257577"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_SDK_Demo.AttachmentMeta.toDomain() -&gt; Swift.Optional&lt;__C.Chat2desk_sdkAttachedFile&gt;"
+                  moduleName = "iOS SDK Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/HP/MobileProjects/iOS%20SDK%20Demo/iOS%20SDK%20Demo/Utils/FileMetadata.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "640DE53C-954F-494E-97AF-4ADE64768102 - f7912a3ba1257577"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_SDK_Demo.AttachmentMeta.toDomain() -&gt; Swift.Optional&lt;__C.Chat2desk_sdkAttachedFile&gt;"
+                  moduleName = "iOS SDK Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/HP/MobileProjects/iOS%20SDK%20Demo/iOS%20SDK%20Demo/Utils/FileMetadata.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "240">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -34,6 +66,38 @@
             endingLineNumber = "41"
             landmarkName = "documentPicker(_:didPickDocumentsAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CDDFD753-C16F-4EFF-AA60-BA78A7D93048 - 6dea4ab4710cbac4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_SDK_Demo.DocumentPicker.Coordinator.documentPicker(_: __C.UIDocumentPickerViewController, didPickDocumentsAt: Swift.Array&lt;Foundation.URL&gt;) -&gt; ()"
+                  moduleName = "iOS SDK Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/HP/MobileProjects/iOS%20SDK%20Demo/iOS%20SDK%20Demo/View/Components/Pickers/DocumentPicker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "CDDFD753-C16F-4EFF-AA60-BA78A7D93048 - 6dea4ab4710cbac4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_SDK_Demo.DocumentPicker.Coordinator.documentPicker(_: __C.UIDocumentPickerViewController, didPickDocumentsAt: Swift.Array&lt;Foundation.URL&gt;) -&gt; ()"
+                  moduleName = "iOS SDK Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/HP/MobileProjects/iOS%20SDK%20Demo/iOS%20SDK%20Demo/View/Components/Pickers/DocumentPicker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

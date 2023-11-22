@@ -33,6 +33,12 @@ struct Header: View {
         }
     }
     
+    func read() -> Void {
+        Task {
+            try await viewModel.chat2desk.read()
+        }
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
@@ -42,6 +48,7 @@ struct Header: View {
                 Menu {
                     Button("flush_all", action: flushAll)
                     Button("fetch_messages", action: syncMessages)
+                    Button("read", action: read)
                 } label: {
                     Label("", systemImage: "ellipsis").rotationEffect(Angle(degrees: 90))
                 }

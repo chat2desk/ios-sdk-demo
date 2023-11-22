@@ -21,11 +21,17 @@ struct SDK_DemoApp: App {
             wsHost: dictionary?["WS_HOST"] as? String ?? "",
             storageHost: dictionary?["STORAGE_HOST"] as? String ?? ""
         )
+        
+        // Example of custom socket configuration
+        let configuration = URLSessionConfiguration.default
+        configuration.allowsCellularAccess = true
+        settings.socketConfiguration = configuration
+        
 #if DEBUG
         settings.withLog = true
-        settings.logLevel = Ktor_client_loggingLogLevel.info
+        settings.logLevel = .info
 #endif
-    
+        
         let chat2desk = Chat2Desk.Companion().create(settings: settings)
         
         observedChat2Desk = Chat2DeskViewModel(chat2desk: chat2desk)
@@ -35,11 +41,7 @@ struct SDK_DemoApp: App {
         WindowGroup {
             Chat().environmentObject(observedChat2Desk)
                 .colorScheme(.light)
-                .onAppear {
-                    Task {
-                        try await observedChat2Desk.chat2desk.start()
-                    }
-                }.onDisappear {
+                .onDisappear {
                     Task {
                         try await observedChat2Desk.chat2desk.stop()
                     }
