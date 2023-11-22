@@ -10,6 +10,7 @@ import SwiftUI
 import chat2desk_sdk
 
 struct Chat: View {
+    @Environment(\.scenePhase) var scenePhase
     @State private var isShowingAttachmentModal = false
     @State private var attachment: AttachmentMeta? = nil
     
@@ -69,6 +70,17 @@ struct Chat: View {
                 withAnimation { self.errorMessage = errorMessage }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     withAnimation { self.errorMessage = nil }
+                }
+            }
+        }
+        .onChange(of: scenePhase) { newPhase in
+            if newPhase == .active {
+                Task {
+                    try await viewModel.chat2desk.start()
+                }
+            } else if newPhase == .background {
+                Task {
+                    try await viewModel.chat2desk.stop()
                 }
             }
         }
