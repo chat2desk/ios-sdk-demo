@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7C14E88B298AC4CF00BE4D23 /* SDK_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14E88A298AC4CF00BE4D23 /* SDK_DemoApp.swift */; };
+		7C5319812B275D8800A193DC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5319802B275D8800A193DC /* HomeViewModel.swift */; };
+		7C60B6182B273AE700D883EE /* NavigationTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60B6172B273AE700D883EE /* NavigationTabs.swift */; };
+		7C60B61A2B273BA900D883EE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60B6192B273BA900D883EE /* HomeView.swift */; };
+		7C60B61C2B273BFB00D883EE /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60B61B2B273BFB00D883EE /* ChatView.swift */; };
+		7C60B61F2B273C9300D883EE /* Chat2DeskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60B61E2B273C9300D883EE /* Chat2DeskViewModel.swift */; };
 		7CB74D6E299CAFE300E54A06 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB74D6D299CAFE300E54A06 /* View.swift */; };
 		7CC59E37298D1E1900F1BFC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C14E88E298AC4D000BE4D23 /* Assets.xcassets */; };
 		7CC59E38298D1E2200F1BFC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C14E891298AC4D000BE4D23 /* Preview Assets.xcassets */; };
@@ -43,6 +48,11 @@
 		7C14E88A298AC4CF00BE4D23 /* SDK_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDK_DemoApp.swift; sourceTree = "<group>"; };
 		7C14E88E298AC4D000BE4D23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C14E891298AC4D000BE4D23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7C5319802B275D8800A193DC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7C60B6172B273AE700D883EE /* NavigationTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabs.swift; sourceTree = "<group>"; };
+		7C60B6192B273BA900D883EE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7C60B61B2B273BFB00D883EE /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		7C60B61E2B273C9300D883EE /* Chat2DeskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat2DeskViewModel.swift; sourceTree = "<group>"; };
 		7CB74D6D299CAFE300E54A06 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		7CC59E3A298D1FBA00F1BFC3 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		7CC59E3E298D1FEF00F1BFC3 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
@@ -117,6 +127,7 @@
 		7C14E889298AC4CF00BE4D23 /* iOS SDK Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7C60B61D2B273C8400D883EE /* ViewModel */,
 				7CC59E6A298D2C5800F1BFC3 /* SDK-Demo-Info.plist */,
 				7CC59E63298D213E00F1BFC3 /* Utils */,
 				7CC59E60298D212300F1BFC3 /* Extensions */,
@@ -137,11 +148,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7C60B61D2B273C8400D883EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7C60B61E2B273C9300D883EE /* Chat2DeskViewModel.swift */,
+				7C5319802B275D8800A193DC /* HomeViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		7CC59E39298D1FAC00F1BFC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				7CC59E3C298D1FD800F1BFC3 /* Components */,
 				7CC59E3A298D1FBA00F1BFC3 /* Chat.swift */,
+				7C60B6172B273AE700D883EE /* NavigationTabs.swift */,
+				7C60B6192B273BA900D883EE /* HomeView.swift */,
+				7C60B61B2B273BFB00D883EE /* ChatView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -361,16 +384,21 @@
 				7CC59E43298D201A00F1BFC3 /* OperatorView.swift in Sources */,
 				7CC59E5B298D20E300F1BFC3 /* ActionSheetCardItem.swift in Sources */,
 				7CC59E41298D200500F1BFC3 /* ConnectionStatus.swift in Sources */,
+				7C5319812B275D8800A193DC /* HomeViewModel.swift in Sources */,
 				7CC59E3F298D1FEF00F1BFC3 /* Header.swift in Sources */,
 				7CC59E5F298D210A00F1BFC3 /* ActionSheetCard.swift in Sources */,
+				7C60B61F2B273C9300D883EE /* Chat2DeskViewModel.swift in Sources */,
 				7CC59E67298D215E00F1BFC3 /* Format.swift in Sources */,
 				7CC59E4F298D207C00F1BFC3 /* MessageListItem.swift in Sources */,
 				7CC59E69298D217300F1BFC3 /* DeliveryStatus.swift in Sources */,
 				7CC59E48298D204000F1BFC3 /* AttachmentModal.swift in Sources */,
 				7CC59E4D298D206C00F1BFC3 /* MessageList.swift in Sources */,
+				7C60B61C2B273BFB00D883EE /* ChatView.swift in Sources */,
 				7CC59E4A298D205200F1BFC3 /* AttachmentPreview.swift in Sources */,
 				7CC59E46298D203300F1BFC3 /* MessageInput.swift in Sources */,
+				7C60B6182B273AE700D883EE /* NavigationTabs.swift in Sources */,
 				7CC59E58298D20C600F1BFC3 /* DocumentPicker.swift in Sources */,
+				7C60B61A2B273BA900D883EE /* HomeView.swift in Sources */,
 				7CB74D6E299CAFE300E54A06 /* View.swift in Sources */,
 				7CC59E3B298D1FBA00F1BFC3 /* Chat.swift in Sources */,
 			);
@@ -530,7 +558,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chat2desk.demos.chat2desk-sdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -565,7 +593,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chat2desk.demos.chat2desk-sdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

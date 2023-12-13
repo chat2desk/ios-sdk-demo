@@ -34,7 +34,7 @@ struct Chat: View {
         ZStack {
             VStack(spacing: 0) {
                 Header()
-                MessageList(messages: viewModel.messages)
+                MessageList()
                     .onTapGesture {
                         hideKeyboard()
                     }
@@ -74,7 +74,7 @@ struct Chat: View {
             }
         }
         .onChange(of: scenePhase) { newPhase in
-            if newPhase == .active {
+            if newPhase == .active && viewModel.connectionStatus != .connected {
                 Task {
                     try await viewModel.chat2desk.start()
                 }
@@ -82,6 +82,18 @@ struct Chat: View {
                 Task {
                     try await viewModel.chat2desk.stop()
                 }
+            }
+        }
+        .onAppear {
+            if (viewModel.connectionStatus != .connected) {
+                Task {
+                    try await viewModel.chat2desk.start()
+                }
+            }
+        }
+        .onDisappear {
+            Task {
+                try await viewModel.chat2desk.stop()
             }
         }
     }

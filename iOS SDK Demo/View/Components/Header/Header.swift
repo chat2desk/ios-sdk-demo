@@ -42,7 +42,7 @@ struct Header: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
-                OperatorView(user: viewModel.responder)
+                OperatorView(user: $viewModel.responder)
                 Spacer()
                 
                 Menu {
@@ -54,7 +54,7 @@ struct Header: View {
                 }
             }
             
-            ConnectionStatus(connectionStatus: viewModel.connectionStatus, onConnect: connect, onDisconect: disconnect)
+            ConnectionStatus(connectionStatus: $viewModel.connectionStatus, onConnect: connect, onDisconect: disconnect)
         }
         .padding(.horizontal, 20)
         .padding(.top, 15)
