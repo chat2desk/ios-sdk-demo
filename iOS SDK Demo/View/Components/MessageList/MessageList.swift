@@ -7,7 +7,6 @@ import SwiftUI
 import chat2desk_sdk
 
 struct MessageList: View {
-    var messages: [Message]
     @EnvironmentObject var viewModel: Chat2DeskViewModel
     
     func resendMessage(message: Message) -> Void {
@@ -28,7 +27,7 @@ struct MessageList: View {
     }
     
     var list: some View {
-        List(messages, id: \.id) { message in
+        List(viewModel.messages, id: \.id) { message in
             MessageListItem(message: message, onResend: resendMessage)
                 .listRowSeparator(.hidden)
                 .listRowBackground(Color.messageListBackground)
@@ -42,7 +41,7 @@ struct MessageList: View {
     }
     
     var body: some View {
-        if (messages.count == 0) {
+        if (viewModel.messages.count == 0) {
             emptyList
         } else {
             list
@@ -53,8 +52,8 @@ struct MessageList: View {
 struct MessageList_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            MessageList(messages: [])
-            MessageList(messages: messagesFixture)
+            MessageList()
+            MessageList()
         }
     }
 }

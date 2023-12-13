@@ -10,7 +10,7 @@ import SwiftUI
 import chat2desk_sdk
 
 struct OperatorView: View {
-    var user: Operator?
+    @Binding var user: Operator?
     
     var fallbackImage: some View {
         Image(systemName: "person.fill").foregroundColor(.mainColor).frame(width: 16, height: 16)
@@ -58,10 +58,10 @@ struct OperatorView: View {
 struct OperatorView_Preview: PreviewProvider {
     static var previews: some View {
         VStack(alignment: .leading) {
-            OperatorView(user: nil)
-            OperatorView(user: Operator.init(name: "Operator Name", avatar: nil, typing: false))
-            OperatorView(user: Operator.init(name: "Operator Name", avatar: "http://placekitten.com/200/300", typing: false))
-            OperatorView(user: Operator.init(name: "Operator Name", avatar: nil, typing: true))
+            OperatorView(user: .constant(nil))
+            OperatorView(user: .constant(Operator.init(name: "Operator Name", avatar: nil, typing: false)))
+            OperatorView(user: .constant(Operator.init(name: "Operator Name", avatar: "http://placekitten.com/200/300", typing: false)))
+            OperatorView(user:.constant(Operator.init(name: "Operator Name", avatar: nil, typing: true)))
         }
     }
 }

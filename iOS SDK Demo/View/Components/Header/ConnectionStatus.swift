@@ -10,7 +10,8 @@ import SwiftUI
 import chat2desk_sdk
 
 struct ConnectionStatus: View {
-    var connectionStatus: ConnectionState?
+    @Binding var connectionStatus: ConnectionState?
+    
     var onConnect: () -> ()
     var onDisconect: () -> ()
     
@@ -58,9 +59,9 @@ struct ConnectionStatus: View {
 
 struct ConnectionStatus_Preview: PreviewProvider {
     static var previews: some View {
-        ConnectionStatus(connectionStatus: .connected, onConnect: {}, onDisconect: {})
-        ConnectionStatus(connectionStatus: .closed, onConnect: {}, onDisconect: {})
-        ConnectionStatus(connectionStatus: .connecting, onConnect: {}, onDisconect: {})
-        ConnectionStatus(connectionStatus: .closing, onConnect: {}, onDisconect: {})
+        ConnectionStatus(connectionStatus: .constant(.connected), onConnect: {}, onDisconect: {})
+        ConnectionStatus(connectionStatus: .constant(.closed), onConnect: {}, onDisconect: {})
+        ConnectionStatus(connectionStatus: .constant(.connecting), onConnect: {}, onDisconect: {})
+        ConnectionStatus(connectionStatus: .constant(.closing), onConnect: {}, onDisconect: {})
     }
 }
