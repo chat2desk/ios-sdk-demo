@@ -56,11 +56,11 @@ struct Chat: View {
         .onReceive(viewModel.$connectionStatus) { status in
             if (status == .connected) {
                 Task{
-//                    try await viewModel.chat2desk.sendClientParams(
-//                        name: "Chat2Desk SDK Demo",
-//                        phone: "Test Phone",
-//                        fieldSet: [1 : "Field 1", 5: "Field 5"]
-//                    )
+                    //                    try await viewModel.chat2desk.sendClientParams(
+                    //                        name: "Chat2Desk SDK Demo",
+                    //                        phone: "Test Phone",
+                    //                        fieldSet: [1 : "Field 1", 5: "Field 5"]
+                    //                    )
                     try await viewModel.chat2desk.fetchNewMessages()
                 }
             }
@@ -101,6 +101,6 @@ struct Chat: View {
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        Chat()
+        Chat().environmentObject(Chat2DeskViewModel())
     }
 }

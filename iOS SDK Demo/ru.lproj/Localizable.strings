@@ -27,3 +27,9 @@
 
 /* No comment provided by engineer. */
 "read" = "Отметить прочитанным";
+
+/* No comment provided by engineer. */
+"search" = "Поиск сообщений";
+
+/* No comment provided by engineer. */
+"load_more" = "Загрузить еще";
