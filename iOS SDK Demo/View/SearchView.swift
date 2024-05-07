@@ -29,9 +29,7 @@ struct SearchView: View {
     }
     
     func runSearch() {
-        Task {
-            messages = try await viewModel.chat2desk.findByText(query: searchText)
-        }
+        messages =  viewModel.chat2desk.searchByQuery(query: searchText, options: nil)
     }
 }
 
