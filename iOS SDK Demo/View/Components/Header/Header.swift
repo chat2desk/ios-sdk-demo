@@ -13,7 +13,7 @@ struct Header: View {
     
     func connect() -> Void {
         Task {
-            try await viewModel.chat2desk.start()
+            try await viewModel.chat2desk.start(clientId: viewModel.clientToken)
         }
     }
     
@@ -31,7 +31,7 @@ struct Header: View {
     
     func syncMessages() -> Void {
         Task {
-            try await viewModel.chat2desk.fetchMessages()
+            try await viewModel.chat2desk.fetchMessages(loadMore: false, clear: true)
         }
     }
     
@@ -70,9 +70,7 @@ struct Header: View {
         .padding(.top, 15)
         .padding(.bottom, 10)
         .sheet(isPresented: $activateModalView) {
-            NavigationView {
-                SearchView()
-            }
+            SearchView()
         }
     }
 }

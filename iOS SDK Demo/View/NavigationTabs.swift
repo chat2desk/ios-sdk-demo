@@ -14,7 +14,7 @@ struct NavigationTabs: View {
         TabView(selection: $selectedIndex) {
             NavigationView {
                 if (selectedIndex == 0) {
-                    HomeView()
+                    HomeView().navigationBarHidden(true)
                 }
             }
             .onTapGesture {
@@ -28,7 +28,7 @@ struct NavigationTabs: View {
             
             NavigationView {
                 if (selectedIndex == 1) {
-                    ChatView()
+                    ChatView().navigationBarHidden(true)
                 }
             }
             .onTapGesture {

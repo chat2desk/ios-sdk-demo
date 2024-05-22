@@ -39,7 +39,9 @@
 	<string>document permissions</string>
 	<key>NSDownloadsFolderUsageDescription</key>
 	<string>document permissions</string>
-    <key>UIFileSharingEnabled</key>
-    <true/>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>CLIENT_TOKEN</key>
+	<string>$(CLIENT_TOKEN)</string>
 </dict>
 </plist>

@@ -17,7 +17,7 @@ struct MessageList: View {
     
     func loadMore() -> Void {
         Task{
-            try await viewModel.chat2desk.fetchMessages(loadMore:true)
+            try await viewModel.chat2desk.fetchMessages(loadMore:true, clear: false)
         }
     }
     

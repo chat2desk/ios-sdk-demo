@@ -21,7 +21,8 @@ struct SearchView: View {
                 ForEach(messages, id: \.self) { message in
                     Text(message.text ?? "")
                 }
-            }.navigationTitle("search")
+            }
+            .navigationTitle("search")
         }
         .searchable(text: $searchText)
         .onSubmit(of: .search, runSearch)
