@@ -71,6 +71,8 @@ struct MessageListItem: View {
                     Image(systemName: statusIcon(message.status))
                         .foregroundColor(message.status != .notDelivered ? .mainColor : .red)
                     
+                    Text(message.read.name.lowercased())
+                    
                 }.frame(alignment: .center)
             }
             .padding(.horizontal, 8)

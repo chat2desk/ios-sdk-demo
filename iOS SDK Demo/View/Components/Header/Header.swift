@@ -9,9 +9,11 @@ import chat2desk_sdk
 struct Header: View {
     @EnvironmentObject var viewModel: Chat2DeskViewModel
     
+    @State private var activateModalView = false
+    
     func connect() -> Void {
         Task {
-            try await viewModel.chat2desk.start()
+            try await viewModel.chat2desk.start(clientId: viewModel.clientToken)
         }
     }
     
@@ -29,7 +31,7 @@ struct Header: View {
     
     func syncMessages() -> Void {
         Task {
-            try await viewModel.chat2desk.fetchMessages()
+            try await viewModel.chat2desk.fetchMessages(loadMore: false, clear: true)
         }
     }
     
@@ -41,11 +43,19 @@ struct Header: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            HStack {
+            HStack(alignment: .center) {
                 OperatorView(user: $viewModel.responder)
                 Spacer()
                 
                 Menu {
+                    Button(action: {
+                        activateModalView.toggle()
+                    }, label: {
+                        Label(
+                            title: { Text("search") },
+                            icon: { Image(systemName: "magnifyingglass.circle") }
+                        )
+                    })
                     Button("flush_all", action: flushAll)
                     Button("fetch_messages", action: syncMessages)
                     Button("read", action: read)
@@ -59,11 +69,14 @@ struct Header: View {
         .padding(.horizontal, 20)
         .padding(.top, 15)
         .padding(.bottom, 10)
+        .sheet(isPresented: $activateModalView) {
+            SearchView()
+        }
     }
 }
 
 struct Header_Previews: PreviewProvider {
     static var previews: some View {
-        Header()
+        Header().environmentObject(Chat2DeskViewModel())
     }
 }

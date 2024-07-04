@@ -15,6 +15,7 @@ class Chat2DeskViewModel: ObservableObject {
     @Published public var customFields: [CustomField] = []
     
     public let chat2desk: Chat2Desk
+    public let clientToken: String?
     
     var messagesWatcher: Closeable?
     var operatorWatcher: Closeable?
@@ -23,7 +24,9 @@ class Chat2DeskViewModel: ObservableObject {
     var customFieldsWatcher: Closeable?
     
     init() {
+        let dictionary = Bundle.main.infoDictionary
         self.chat2desk = Self.createChat2Desk()
+        self.clientToken = dictionary?["CLIENT_TOKEN"] as? String ?? nil
         
         messagesWatcher = chat2desk.watchMessages().watch { [weak self] messages in
             self?.messages = messages?.compactMap({ $0 as? Message }) ?? []

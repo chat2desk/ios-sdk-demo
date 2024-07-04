@@ -37,6 +37,7 @@
 		7CC59E67298D215E00F1BFC3 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC59E66298D215E00F1BFC3 /* Format.swift */; };
 		7CC59E69298D217300F1BFC3 /* DeliveryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC59E68298D217300F1BFC3 /* DeliveryStatus.swift */; };
 		7CC59E6D298D300D00F1BFC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7CC59E6F298D300D00F1BFC3 /* Localizable.strings */; };
+		7CF548A92BE4BBA50080BB68 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF548A82BE4BBA50080BB68 /* SearchView.swift */; };
 		ABA8334787BAE639403E1F92 /* Pods_iOS_SDK_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D356A152A0A3B3DE025E639 /* Pods_iOS_SDK_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		7CC59E6A298D2C5800F1BFC3 /* SDK-Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SDK-Demo-Info.plist"; sourceTree = SOURCE_ROOT; };
 		7CC59E6E298D300D00F1BFC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7CC59E70298D301200F1BFC3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7CF548A82BE4BBA50080BB68 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		7CF79D96298D1AE600F9FC6F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		93D8F218B72D39AAFF9BE0EF /* Pods-iOS SDK Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS SDK Demo.debug.xcconfig"; path = "Target Support Files/Pods-iOS SDK Demo/Pods-iOS SDK Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		BC7ED34158C2E9791D565227 /* Pods-iOS SDK Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS SDK Demo.release.xcconfig"; path = "Target Support Files/Pods-iOS SDK Demo/Pods-iOS SDK Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				7C60B6172B273AE700D883EE /* NavigationTabs.swift */,
 				7C60B6192B273BA900D883EE /* HomeView.swift */,
 				7C60B61B2B273BFB00D883EE /* ChatView.swift */,
+				7CF548A82BE4BBA50080BB68 /* SearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				7CC59E46298D203300F1BFC3 /* MessageInput.swift in Sources */,
 				7C60B6182B273AE700D883EE /* NavigationTabs.swift in Sources */,
 				7CC59E58298D20C600F1BFC3 /* DocumentPicker.swift in Sources */,
+				7CF548A92BE4BBA50080BB68 /* SearchView.swift in Sources */,
 				7C60B61A2B273BA900D883EE /* HomeView.swift in Sources */,
 				7CB74D6E299CAFE300E54A06 /* View.swift in Sources */,
 				7CC59E3B298D1FBA00F1BFC3 /* Chat.swift in Sources */,
@@ -542,7 +546,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS SDK Demo/Preview Content\"";
 				DEVELOPMENT_TEAM = GP3VSUDRQU;
 				ENABLE_PREVIEWS = YES;
@@ -558,7 +562,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chat2desk.demos.chat2desk-sdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -577,7 +581,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS SDK Demo/Preview Content\"";
 				DEVELOPMENT_TEAM = GP3VSUDRQU;
 				ENABLE_PREVIEWS = YES;
@@ -593,7 +597,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chat2desk.demos.chat2desk-sdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

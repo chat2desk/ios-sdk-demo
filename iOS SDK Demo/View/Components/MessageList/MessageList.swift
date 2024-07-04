@@ -15,6 +15,12 @@ struct MessageList: View {
         }
     }
     
+    func loadMore() -> Void {
+        Task{
+            try await viewModel.chat2desk.fetchMessages(loadMore:true, clear: false)
+        }
+    }
+    
     var emptyList: some View {
         List {
             Text("empty_list")
@@ -27,13 +33,17 @@ struct MessageList: View {
     }
     
     var list: some View {
-        List(viewModel.messages, id: \.id) { message in
-            MessageListItem(message: message, onResend: resendMessage)
-                .listRowSeparator(.hidden)
-                .listRowBackground(Color.messageListBackground)
-                .scaleEffect(x: 1, y: -1, anchor: .center)
-                .buttonStyle(BorderlessButtonStyle())
+        List{
+            ForEach(viewModel.messages, id: \.id) { message in
+                MessageListItem(message: message, onResend: resendMessage)
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.messageListBackground)
+                    .scaleEffect(x: 1, y: -1, anchor: .center)
+                    .buttonStyle(BorderlessButtonStyle())
+            }
             
+            Button("load_more", action: loadMore)
+            .scaleEffect(x: 1, y: -1, anchor: .center)
         }
         .listStyle(.plain)
         .background(Color.messageListBackground)
@@ -52,8 +62,8 @@ struct MessageList: View {
 struct MessageList_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            MessageList()
-            MessageList()
+            MessageList().environmentObject(Chat2DeskViewModel())
+            MessageList().environmentObject(Chat2DeskViewModel())
         }
     }
 }
