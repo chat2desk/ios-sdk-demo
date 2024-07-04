@@ -2,15 +2,15 @@ PODS:
   - chat2desk_sdk (1.4.0)
 
 DEPENDENCIES:
-  - chat2desk_sdk (from `/Users/rlyasev/Projects/Chat2DeskSDK/chat2desk_sdk/chat2desk_sdk.podspec`)
+  - chat2desk_sdk (~> 1.4.0)
 
-EXTERNAL SOURCES:
-  chat2desk_sdk:
-    :path: "/Users/rlyasev/Projects/Chat2DeskSDK/chat2desk_sdk/chat2desk_sdk.podspec"
+SPEC REPOS:
+  trunk:
+    - chat2desk_sdk
 
 SPEC CHECKSUMS:
-  chat2desk_sdk: 76c4e16b8fa58decfbbea65013f3c499255361ee
+  chat2desk_sdk: 82a54606bb0f317594aa779758ea136c43695879
 
-PODFILE CHECKSUM: 5e427a0f23af64f0249f425f8194fa090ea0a754
+PODFILE CHECKSUM: 1efe93722b80e34e6d2463033a7c74896fdfa34a
 
 COCOAPODS: 1.14.3
