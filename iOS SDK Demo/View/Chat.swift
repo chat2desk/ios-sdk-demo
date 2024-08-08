@@ -76,7 +76,7 @@ struct Chat: View {
         .onChange(of: scenePhase) { newPhase in
             if newPhase == .active && viewModel.connectionStatus != .connected {
                 Task {
-                    try await viewModel.chat2desk.start(clientId: viewModel.clientToken)
+                    try await viewModel.chat2desk.start()
                 }
             } else if newPhase == .background {
                 Task {
@@ -87,7 +87,7 @@ struct Chat: View {
         .onAppear {
             if (viewModel.connectionStatus != .connected) {
                 Task {
-                    try await viewModel.chat2desk.start(clientId: viewModel.clientToken)
+                    try await viewModel.chat2desk.start()
                 }
             }
         }

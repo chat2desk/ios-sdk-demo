@@ -13,7 +13,7 @@ struct Header: View {
     
     func connect() -> Void {
         Task {
-            try await viewModel.chat2desk.start(clientId: viewModel.clientToken)
+            try await viewModel.chat2desk.start()
         }
     }
     

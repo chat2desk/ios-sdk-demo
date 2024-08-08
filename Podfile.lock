@@ -1,16 +1,16 @@
 PODS:
-  - chat2desk_sdk (1.4.0)
+  - chat2desk_sdk (1.5.0)
 
 DEPENDENCIES:
-  - chat2desk_sdk (~> 1.4.0)
+  - chat2desk_sdk (~> 1.5.0)
 
 SPEC REPOS:
   trunk:
     - chat2desk_sdk
 
 SPEC CHECKSUMS:
-  chat2desk_sdk: 82a54606bb0f317594aa779758ea136c43695879
+  chat2desk_sdk: 8fbecca0d234635f194c045063c92e0fc168320c
 
-PODFILE CHECKSUM: 1efe93722b80e34e6d2463033a7c74896fdfa34a
+PODFILE CHECKSUM: 1754277dcc7a3cf0e8f541f0944f1a17efcf01ec
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.2
