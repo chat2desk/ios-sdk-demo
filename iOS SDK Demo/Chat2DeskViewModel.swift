@@ -68,7 +68,11 @@ class Chat2DeskViewModel: ObservableObject {
         settings.logLevel = .info
 #endif
         
-        return Chat2Desk.Companion().create(settings: settings)
+        do {
+            return try Chat2Desk.Companion().create(settings: settings)
+        } catch {
+            fatalError("Failed to initialize Chat2Desk: \(error.localizedDescription)")
+        }
     }
     
     deinit {

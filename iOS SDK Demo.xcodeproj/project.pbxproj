@@ -38,13 +38,10 @@
 		7CC59E69298D217300F1BFC3 /* DeliveryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC59E68298D217300F1BFC3 /* DeliveryStatus.swift */; };
 		7CC59E6D298D300D00F1BFC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7CC59E6F298D300D00F1BFC3 /* Localizable.strings */; };
 		7CF548A92BE4BBA50080BB68 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF548A82BE4BBA50080BB68 /* SearchView.swift */; };
-		ABA8334787BAE639403E1F92 /* Pods_iOS_SDK_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D356A152A0A3B3DE025E639 /* Pods_iOS_SDK_Demo.framework */; };
+		E9DCE962F1577A1E3242835E /* chat2desk_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 52EB2780EB43EB49AFBAF591 /* chat2desk_sdk */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4B76A40642FBC5B5C105E10A /* Pods-SDK Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDK Demo.release.xcconfig"; path = "Target Support Files/Pods-SDK Demo/Pods-SDK Demo.release.xcconfig"; sourceTree = "<group>"; };
-		5B1BB7699949DAEB95D15BB2 /* Pods-SDK Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDK Demo.debug.xcconfig"; path = "Target Support Files/Pods-SDK Demo/Pods-SDK Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		6D356A152A0A3B3DE025E639 /* Pods_iOS_SDK_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_SDK_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C14E887298AC4CF00BE4D23 /* iOS SDK Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS SDK Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C14E88A298AC4CF00BE4D23 /* SDK_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDK_DemoApp.swift; sourceTree = "<group>"; };
 		7C14E88E298AC4D000BE4D23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,8 +77,6 @@
 		7CC59E70298D301200F1BFC3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7CF548A82BE4BBA50080BB68 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		7CF79D96298D1AE600F9FC6F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		93D8F218B72D39AAFF9BE0EF /* Pods-iOS SDK Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS SDK Demo.debug.xcconfig"; path = "Target Support Files/Pods-iOS SDK Demo/Pods-iOS SDK Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		BC7ED34158C2E9791D565227 /* Pods-iOS SDK Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS SDK Demo.release.xcconfig"; path = "Target Support Files/Pods-iOS SDK Demo/Pods-iOS SDK Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,32 +84,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABA8334787BAE639403E1F92 /* Pods_iOS_SDK_Demo.framework in Frameworks */,
+				E9DCE962F1577A1E3242835E /* chat2desk_sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A9ED7D3804C3DACCB51D371 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5B1BB7699949DAEB95D15BB2 /* Pods-SDK Demo.debug.xcconfig */,
-				4B76A40642FBC5B5C105E10A /* Pods-SDK Demo.release.xcconfig */,
-				93D8F218B72D39AAFF9BE0EF /* Pods-iOS SDK Demo.debug.xcconfig */,
-				BC7ED34158C2E9791D565227 /* Pods-iOS SDK Demo.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		7C14E87E298AC4CF00BE4D23 = {
 			isa = PBXGroup;
 			children = (
 				7CF79D96298D1AE600F9FC6F /* Config.xcconfig */,
 				7C14E889298AC4CF00BE4D23 /* iOS SDK Demo */,
 				7C14E888298AC4CF00BE4D23 /* Products */,
-				4A9ED7D3804C3DACCB51D371 /* Pods */,
-				D037A21C712860D5A78D34FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,14 +235,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		D037A21C712860D5A78D34FB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6D356A152A0A3B3DE025E639 /* Pods_iOS_SDK_Demo.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,17 +242,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C14E895298AC4D000BE4D23 /* Build configuration list for PBXNativeTarget "iOS SDK Demo" */;
 			buildPhases = (
-				5072C97B0F963DDAD61E5A74 /* [CP] Check Pods Manifest.lock */,
 				7C14E883298AC4CF00BE4D23 /* Sources */,
 				7C14E884298AC4CF00BE4D23 /* Frameworks */,
 				7C14E885298AC4CF00BE4D23 /* Resources */,
-				67F7CF400B1E1EDC22E92119 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "iOS SDK Demo";
+			packageProductDependencies = (
+				52EB2780EB43EB49AFBAF591 /* chat2desk_sdk */,
+			);
 			productName = "SDK Demo";
 			productReference = 7C14E887298AC4CF00BE4D23 /* iOS SDK Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -308,6 +283,9 @@
 				ru,
 			);
 			mainGroup = 7C14E87E298AC4CF00BE4D23;
+			packageReferences = (
+				7796912FB3C0D5AC865F8915 /* XCRemoteSwiftPackageReference "chat2desk-sdk-spm" */,
+			);
 			productRefGroup = 7C14E888298AC4CF00BE4D23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -329,48 +307,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5072C97B0F963DDAD61E5A74 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-iOS SDK Demo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		67F7CF400B1E1EDC22E92119 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iOS SDK Demo/Pods-iOS SDK Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iOS SDK Demo/Pods-iOS SDK Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS SDK Demo/Pods-iOS SDK Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7C14E883298AC4CF00BE4D23 /* Sources */ = {
@@ -541,7 +477,6 @@
 		};
 		7C14E896298AC4D000BE4D23 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93D8F218B72D39AAFF9BE0EF /* Pods-iOS SDK Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -576,7 +511,6 @@
 		};
 		7C14E897298AC4D000BE4D23 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC7ED34158C2E9791D565227 /* Pods-iOS SDK Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -631,6 +565,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7796912FB3C0D5AC865F8915 /* XCRemoteSwiftPackageReference "chat2desk-sdk-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chat2desk/chat2desk-sdk-spm.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.5.14;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52EB2780EB43EB49AFBAF591 /* chat2desk_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7796912FB3C0D5AC865F8915 /* XCRemoteSwiftPackageReference "chat2desk-sdk-spm" */;
+			productName = chat2desk_sdk;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7C14E87F298AC4CF00BE4D23 /* Project object */;
 }

@@ -115,7 +115,7 @@ let messagesFixture: [Message] = [Message(
     text: "",
     type: .in,
     date: date,
-    attachments: [] as [Attachment]?
+    attachments: [] as [Attachment]?, buttons: nil
 ),Message(
     id: "2",
     realId: 111,
@@ -124,7 +124,7 @@ let messagesFixture: [Message] = [Message(
     text: "text",
     type: .out,
     date: date,
-    attachments: [] as [Attachment]?
+    attachments: [] as [Attachment]?, buttons: nil
 ),Message(
     id: "3",
     realId: 111,
@@ -133,7 +133,7 @@ let messagesFixture: [Message] = [Message(
     text: "text",
     type: .in,
     date: date,
-    attachments: [] as [Attachment]?
+    attachments: [] as [Attachment]?, buttons: nil
 ),Message(
     id: "4",
     realId: 111,
@@ -142,7 +142,7 @@ let messagesFixture: [Message] = [Message(
     text: "text",
     type: .out,
     date: date,
-    attachments: [] as [Attachment]?
+    attachments: [] as [Attachment]?, buttons: nil
 ),Message(
     id: "5",
     realId: 111,
@@ -155,7 +155,7 @@ let messagesFixture: [Message] = [Message(
         Attachment(id: 1, fileSize: 1, contentType: "image/jpeg", link: "http://placekitten.com/200/300", originalFileName: "Kitten", status: .delivered),
         Attachment(id: 2, fileSize: 1, contentType: "image/jpeg", link: "http://placekitten.com/200/300", originalFileName: "Kitten", status: .notDelivered),
         Attachment(id: 3, fileSize: 1, contentType: "image/jpeg", link: "http://placekitten.com/300/200", originalFileName: "Kitten", status: .sending)
-    ] as [Attachment]?
+    ] as [Attachment]?, buttons: nil
 ),Message(
     id: "6",
     realId: 111,
@@ -168,5 +168,5 @@ let messagesFixture: [Message] = [Message(
         Attachment(id: 1, fileSize: 1, contentType: "audio/mp3", link: "http://example.com", originalFileName: "Kitten", status: .delivered),
         Attachment(id: 2, fileSize: 1, contentType: "audio/mp3", link: "http://example.com", originalFileName: "Kitten", status: .delivered),
         Attachment(id: 3, fileSize: 1, contentType: "audio/mp3", link: "http://example.com", originalFileName: "Kitten", status: .notDelivered)
-    ] as [Attachment]?
+    ] as [Attachment]?, buttons: nil
 ),]

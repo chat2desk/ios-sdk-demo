@@ -1,0 +1,15 @@
+{
+  "originHash" : "8edd68bb86d3069bd28d796c941dd8cb4b49402de20caad163b74f508258ef46",
+  "pins" : [
+    {
+      "identity" : "chat2desk-sdk-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/chat2desk/chat2desk-sdk-spm.git",
+      "state" : {
+        "revision" : "7e70560fd13e1c56b9e6aa358b570d5671814435",
+        "version" : "1.5.14"
+      }
+    }
+  ],
+  "version" : 3
+}

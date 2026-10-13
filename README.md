@@ -30,7 +30,10 @@ STORAGE_HOST = YOUR_STORAGE_TOKEN_HERE
 ````
 Note that you need to modify the URLs to escape //, as Xcode considers these characters to be the beginning of a comment. For example, use `https:$(SIMPLE_SLASH)/livechatv2-support.chat2desk.com`
 
-3. Build and run the app.
+3. Open `iOS SDK Demo.xcodeproj` in Xcode and wait for Swift Package Manager to resolve the SDK dependency.
+   The project uses [chat2desk-sdk-spm](https://github.com/chat2desk/chat2desk-sdk-spm), pinned to version **1.5.14**.
+   The `chat2desk_sdk` product is already linked to the application target.
+4. Build and run the app.
 
 ## Usage
 
